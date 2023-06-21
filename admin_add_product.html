@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Store</title>
@@ -8,46 +9,46 @@
 </head>
 <body>
 	<header class="header">
-		<div class="container align-items_center">
-			<a href="index.php" class="logo" title="logo">
-				<img src="img/logo.png" class="img_logo" alt="Logo">
-			</a>
-			<div class="header-right">
-				<form class="search-form">
-					<input type="text" name="id" value placeholder="Поиск"
-						class="search search-input">
-					<button><i class="fa fa-search search-i"></i></button>
-				</form>
-				<div class="block">
-					<div class="subblock">
-						<div class="cart-informer">
-							<button class="cart-informer__button">
-								<span class="cart-informer__count" id="cart_count">5</span>
-								<span class="cart-informer__icon"><i
-										class="fa fa-shopping-cart cart-informer__icon-i"></i></span>
-								<span class="cart-informer__value" id="cart_cost">500 ₽</span>
-							</button>
-						</div>
+    <div class="container align-items_center">
+      <a href="index.html" class="logo" title="logo">
+        <img src="img/logo.png" class="img_logo" alt="Logo">
+      </a>
+      <div class="header-right">
+        <form class="search-form">
+          <input type="text" name="id" value="" placeholder="Поиск" class="search search-input">
+          <button><i class="fa fa-search search-i"></i></button>
+        </form>
 
-						<div class="login">
-							<button class="button-login" onclick="window.location.href='login.php'">
-								Вход
-							</button>
-						</div>
-						<!--
-                 <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()"> личный кабинет
-                     <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content" id="myDropdown">
-                    <a href="vendor/addres.php">Перейти</a>
-                    <a href="vendor/exit.php">Выход</a>
-                    </div>
-                </div> 	
-                -->
-					</div>
-				</div>
-			</header>
+        <div class="block">
+          <div class="subblock">
+            <div class="cart-informer">
+              <button class="cart-informer__button">
+                <span class="cart-informer__count" id="cart_count">5</span>
+                <span class="cart-informer__icon"><i class="fa fa-shopping-cart cart-informer__icon-i"></i></span>
+                <span class="cart-informer__value" id="cart_cost">500 ₽</span>
+              </button>
+            </div>
+
+            <!--<div class="login">
+              <button class="button-login" onclick="window.location.href='login.html';">
+                 Вход
+              </button>
+            </div>-->
+              
+            <div class="dropdown">
+              <button class="dropbtn" onclick="myFunction()"> личный кабинет
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="personal_area.html">Перейти</a>
+                <a href="">Выход</a>
+              </div>
+            </div> 	
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 			<div class="menu">
 				<div class="container">
