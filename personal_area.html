@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8">
     <title>Store</title>
@@ -51,7 +50,7 @@
         </div>
       </div>
     </div>
-  </header>	
+  </header>
 	 
 	<div class="menu">
 		<div class="container">
@@ -101,45 +100,52 @@
             <a class="menu__border"></a>				
 		</div>
 	</div>
-
-<div class = "container">
-<div class = "add_product">
-        <form action = "vendor/update.php" method="post" enctype="multipart/form-data">
-            <div class="add_product_container">
-			
-                <input type="hidden" name="id" value="">
-				
-                <label for="email"><b class="add_product_point">Название</b></label>
-                <input type="text" name="title" value="Брелок"  placeholder="Название товара" required class="add_product_text">
-
-                <label for="psw"><b class="add_product_point">Цена</b></label>
-                <input type="number" placeholder="Цена товара" name="price" value="50" required class="add_product_text">
-				
-				<label for="psw"><b class="add_product_point">Категория</b></label>
-				<select  name="category"   required class="add_product_text">
-				<option value="" selected disabled hidden>брелки</option>
-                    <option value="">блокноты</option>
-					<option value="">брелки</option>
-					<option value="">домашняя одежда</option>
-					<option value="">канцелярия</option>
-					<option value="">постеры</option>
-					<option value="">ручки</option>
-					<option value="">сумки</option>
-					<option value="">футболки</option>
-               
-               </select>
-			   
-			   <label for="psw"><b class="add_product_point">Изображение</b></label>
-	           <input type="file" name="image" src="" class="add_product_text" >
-				
-                <hr class="registration__line">
-               <button type="submit" class="registerbtn" >Изменить</button>
+	
+	<div class = "container">
+	<div class="vertical-menu verticlal-menu_personal_area">
+	   <div class="personal_area_name"></div>
+		<a href="personal_area.html" class="active border-top" >История заказов</a>
+		<a href="update_personal_area.html" class="border-bottom">Изменить данные</a>
 	</div>
-	</form>
-	</div>
+    <div class="shopping-cart last__order">
+	  <div class="header-cart">
+            <div class = "total__price-cart">История заказов</div>
+	  </div> 
+      <div class="item-cart item-cart_personal_area" data-id="">
+	     <div class = "product__inf-cart">
+         <img src="img/T-shirt.jpg" class="image-cart" alt="" />
+         <div class="description-cart description-cart_personal_area">футболка</div>
+		 <div class="item__price-cart">200 ₽</div>
+		</div>
+      </div>
+	  <div class="item-cart item-cart_personal_area" data-id="">
+	     <div class = "product__inf-cart">
+         <img src="img/T-shirt.jpg" class="image-cart" alt="" />
+         <div class="description-cart description-cart_personal_area">футболка</div>
+		 <div class="item__price-cart">200 ₽</div>
+		</div>
+      </div>
+	  <div class="item-cart item-cart_personal_area" data-id="">
+	     <div class = "product__inf-cart">
+         <img src="img/T-shirt.jpg" class="image-cart" alt="" />
+         <div class="description-cart description-cart_personal_area">футболка</div>
+		 <div class="item__price-cart">200 ₽</div>
+		</div>
+      </div>
+    </div>
 </div>
 
+<div class = "pages">
+      <div class = "page__left"></div>
+      <a data-id="" class="page page-text" href="page.html">1</a>
+	  <a data-id="" class="page page-text" href="page.html">2</a>
+	  <a data-id="" class="page page-text" href="page.html">3</a>
+	  <a data-id="" class="page page-text" href="last_page.html">4</a>
+	  <div class = "page__right"></div>
+    </div>
+	
 
+</div>
 <div class="grey__background">
 <div id="footer">
     <p >Ponyshop&trade; 2023</p>

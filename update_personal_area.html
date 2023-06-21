@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8">
     <title>Store</title>
@@ -101,45 +100,42 @@
             <a class="menu__border"></a>				
 		</div>
 	</div>
-
-<div class = "container">
-<div class = "add_product">
-        <form action = "vendor/update.php" method="post" enctype="multipart/form-data">
+	<div class = "container">
+	<div class="vertical-menu verticlal-menu_personal_area">
+	    <div class="personal_area_name"></div>
+		<a href="personal_area.html" class="border-top" >Последний заказ</a>
+		<a href="update_personal_area.html" class="border-bottom  active">Изменить данные</a>
+	</div>
+	<div class = "add_product">
+        <form action = "vendor/update_personal_data.php" method="post" enctype="multipart/form-data">
             <div class="add_product_container">
 			
                 <input type="hidden" name="id" value="">
 				
-                <label for="email"><b class="add_product_point">Название</b></label>
-                <input type="text" name="title" value="Брелок"  placeholder="Название товара" required class="add_product_text">
-
-                <label for="psw"><b class="add_product_point">Цена</b></label>
-                <input type="number" placeholder="Цена товара" name="price" value="50" required class="add_product_text">
+                <label for="fname"><b class="registration__point">Имя</b></label>
+				<input type="text" placeholder="Введите имя" value="Артем" name="fname" required class="registration__text">
+	
+				<label for="lname"><b class="registration__point">Фамилия</b></label>
+				<input type="text" placeholder="Введите фамилию" name="lname" value="Соболев" required class="registration__text">
 				
-				<label for="psw"><b class="add_product_point">Категория</b></label>
-				<select  name="category"   required class="add_product_text">
-				<option value="" selected disabled hidden>брелки</option>
-                    <option value="">блокноты</option>
-					<option value="">брелки</option>
-					<option value="">домашняя одежда</option>
-					<option value="">канцелярия</option>
-					<option value="">постеры</option>
-					<option value="">ручки</option>
-					<option value="">сумки</option>
-					<option value="">футболки</option>
-               
-               </select>
-			   
-			   <label for="psw"><b class="add_product_point">Изображение</b></label>
-	           <input type="file" name="image" src="" class="add_product_text" >
+				<label for="psw"><b class="registration__point">Пароль</b></label>
+				<input type="password" placeholder="Введите пароль" name="psw" class="registration__text">
+
+				<label for="psw-repeat"><b class="registration__point">Повторите пароль</b></label>
+				<input type="password" placeholder="Повторите пароль" name="psw-repeat" class="registration__text">
+				
+				<input type="checkbox"  name="change-psw"><label >Изменить пароль</label>
 				
                 <hr class="registration__line">
-               <button type="submit" class="registerbtn" >Изменить</button>
+				<button type="submit" class = "registerbtn" name = "submit">Изменить</button>
 	</div>
 	</form>
 	</div>
+    
 </div>
+	
 
-
+</div>
 <div class="grey__background">
 <div id="footer">
     <p >Ponyshop&trade; 2023</p>
