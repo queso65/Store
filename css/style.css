@@ -603,7 +603,6 @@ a:hover {
 	height:250px;
 }
 
-
 .product__inf-cart{
 	justify-content: space-around;
 	display: flex;
@@ -611,7 +610,6 @@ a:hover {
 	margin-top:25px;
 }
  
-
 .delate__item-cart{
 	margin: 0 auto;
 	width:100%;
@@ -621,6 +619,7 @@ a:hover {
 	padding-top: 10px;
 	text-align: center;
 }
+
 .delate__item__text-cart{
     text-align: center;
 	color:white;
@@ -836,9 +835,6 @@ table td {
 	height:1000px;
 }
 
-
-
-	 
 .table{
 	padding: 35px 0;
 	margin:0 auto;
@@ -986,4 +982,64 @@ table td {
 	font-size:28px;
 }
 
-active
+
+.good-wrap{
+   min-height:500px;
+   margin-top:100px;
+   padding-left:50px;
+   display:flex;
+}
+
+.good-img{
+   height:400px;
+   border-radius:15px;
+   display: block;
+   margin: 0 auto; 
+}
+
+.good-img-wrap{
+   height:400px;
+   width:400px;
+}
+
+.good{
+	width:100px;
+	height:100px
+}
+
+.good_description{
+    flex-wrap: wrap;
+	padding-left:100px;
+    justify-content: center;
+	margin-top:0px;
+}
+
+.good_description-text{
+	width:500px;
+	padding-top:5px;
+	font-family: Geneva, Arial, sans-serif;
+	color:#2b2b2b;
+}
+
+.good-head{
+	font-family: 'Philosopher', sans-serif;
+	font-size:25px;
+}
+
+.good-text-head{
+	padding-top:15px;
+	font-family: 'Philosopher', sans-serif;
+	font-size:19px;
+}
+
+.dropbtn-size{
+  font-family: 'Philosopher', sans-serif;
+  border: 0px;
+  background-color: #ededed;
+  color:black;
+  font-size: 14px;
+}
+
+.dropdown-size{
+	padding-top: 10px;
+}
