@@ -12,7 +12,7 @@ html, body{
 }
 
 .header{
-    background: #ff7af2;
+    background: #a53bcc;
     padding: 35px 0;
 }
 .container{
@@ -44,7 +44,7 @@ html, body{
     margin: 0 auto;
     width: 220px;
     height: 50px;
-    border: 4px solid white;
+    border: 3px solid white;
 	border-radius: 10px;
     padding-left: 5px;
     padding-right: 10px;
@@ -116,7 +116,7 @@ button {
 	font-family: "Comic Sans MS", cursive, sans-serif;
     display: flex;
     align-items: center;
-	border: 4px solid white;
+	border: 3px solid white;
 	border-radius: 10px;
 	width: 70px;
     height: 45px;
@@ -130,9 +130,9 @@ button {
     color: #111;
     font-size: 10px;
     background-color: #fff;
-    width: 23px;
-    height: 23px;
-    margin-right: -4px;
+    width: 20px;
+    height: 20px;
+    margin-right: -2px;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -141,7 +141,7 @@ button {
 .cart-informer__icon {
     width: 45px;
     height: 45px;
-    border: 4px solid white;
+    border: 3px solid white;
 	border-radius: 10px;
     display: flex;
     align-items: center;
@@ -341,7 +341,7 @@ a:hover {
 }
 
 .registerbtn {
-    background-color: #ff7af2;
+    background-color: #a53bcc;
     color: white;
     padding: 15px 19px;
     margin: 6px 0;
@@ -403,7 +403,7 @@ a:hover {
 }
 
 .dropbtn {
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 10px;
   width: 140px;
   height:45px;
@@ -441,12 +441,6 @@ a:hover {
     color: dodgerblue;
 }
 
-.сategory{
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	text-align:center;
-	color: #a8a8a8;
-}
-
 .product-gr{
 	display: grid;
     grid-gap: 45px;
@@ -478,7 +472,7 @@ a:hover {
 }
 .product-list {
    border-radius: 0 0 20px 20px;
-   background: #fafafa;
+   background: #f2f2f2;
    padding: 15px 0;
 }
 .product-list h3 {
@@ -505,7 +499,7 @@ a:hover {
    transition: .3s ease-in;
 }
 .product-item:hover .button {
-   background: #fc5a5a;
+   background: #a53bcc;
 }
 
 
@@ -531,7 +525,7 @@ a:hover {
  margin:auto;
  border-radius:8px;
  margin-top:30px;
- background-color: #ff7af2; 
+ background-color: #a53bcc; 
  width:80%;   
  height: 80px;
  color: white;
@@ -544,7 +538,7 @@ a:hover {
 
 
 .grey__background{
-	background: #ededed;
+	background: #e0dee0;
 	height: 80px;
 }
 
@@ -575,13 +569,14 @@ a:hover {
 
 .total__price-cart{
 	height:30px;
+	font-size:22px;
 }
 
 .total__buton-cart{
 	width:200px;
 	height:55px;
 	margin-left:50px;
-	background-color: #ff7af2; 
+	background-color: #a53bcc; 
 	text-align: center;
 	border-radius:10px;
 	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
@@ -597,9 +592,9 @@ a:hover {
   margin-top:30px;
   padding-bottom:20px;
   height: 300px;
-  border-bottom:  1px solid #e3e3e3;
-  border-left:  1px solid #e3e3e3;
-  border-right:  1px solid #e3e3e3;
+  border-bottom:  1px solid #e8cbf2;
+  border-left:  1px solid #e8cbf2;
+  border-right:  1px solid #e8cbf2;
   border-radius:10px;
 }
 
@@ -620,7 +615,7 @@ a:hover {
 .delate__item-cart{
 	margin: 0 auto;
 	width:100%;
-	background-color: #e3e3e3;
+	background-color: #e8cbf2;
 	height:50px;
 	border-radius:10px;
 	padding-top: 10px;
@@ -806,9 +801,8 @@ a:hover {
 }
 
 .vertical-menu a.active {
-	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-size: 13px;
-    background-color: #6eb7eb;
+    background-color: #dab0e8;
     color: white;
 }
 
@@ -819,9 +813,9 @@ th,td{
 	 }
 	 
 	 th{
-		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-family: 'Philosopher', sans-serif;
 		font-size:15px;
-		background: #ff94f4;
+		background: #a53bcc;
 		color: white;
 	 }
 	 td{
@@ -975,7 +969,7 @@ table td {
 }
 
 .delate__item-cart:hover{
-   background: #d9d9d9;
+   background: #d5a2e8;
 }
 
 .personal_area_name{
@@ -984,3 +978,12 @@ table td {
 	font-family: Arial, sans-serif;
 	padding-bottom:5px;
 }
+
+.сategory{
+	font-family: 'Philosopher', sans-serif;
+	text-align:center;
+	color: #a53bcc;
+	font-size:28px;
+}
+
+active
