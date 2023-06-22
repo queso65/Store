@@ -519,8 +519,6 @@ a:hover {
 	border-radius:10px;
 }
 
-
-
 #footer {
  margin:auto;
  border-radius:8px;
@@ -534,8 +532,6 @@ a:hover {
  font-size:19px;
  font-family: Noto Sans, sans-serif;
 }
-
-
 
 .grey__background{
 	background: #e0dee0;
@@ -554,8 +550,6 @@ a:hover {
 .last__order{
 	width: 500px;
 }
-
-
 
 .header-cart{
   display: flex;
@@ -1041,5 +1035,50 @@ table td {
 }
 
 .dropdown-size{
+	height:75px;
 	padding-top: 10px;
+}
+
+.product-ord-button-wrap{
+   width: auto;
+   text-align: left;
+}
+
+.product-ord-button{
+   padding: 10px 50px;
+}
+
+@media (max-width: 900px) {
+   .good-wrap{
+	 flex-wrap: wrap;
+	 height: auto;
+     padding-left:0px;
+}
+  }
+  
+  .good-head{
+	  padding-top:10px;
+  }
+  
+  .good-img-wrap{
+     margin:0 auto;
+   }
+	
+  .good-text-head,
+  .good-img-wrap,
+  .good_description-text{
+	margin:0 auto;
+    width: 400px;
+  }
+  
+  .good_description{
+	 margin:0 auto;
+	 padding-left:0px;
+	 justify-content:none;
+  }
+  
+  .product-ord-button{
+   padding: 10px 150px;
+  }
+ 
 }
