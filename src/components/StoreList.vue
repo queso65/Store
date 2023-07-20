@@ -1,7 +1,7 @@
 <template>
     <div v-if="posts.length > 0">
     <div class="product-gr">
-      <post-good 
+      <store-good 
         v-for="post in posts" 
         :post="post"
         :key="post.id"
@@ -15,9 +15,9 @@
   </template>
   
   <script>
-  import PostGood from './PostGood.vue';
+  import StoreGood from './StoreGood.vue';
   export default {
-    components: {PostGood},
+    components: {StoreGood},
     props: {
       posts:{
         type: Array,

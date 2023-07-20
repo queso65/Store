@@ -1,6 +1,6 @@
 <template>
     <div class="product-item">
-        <img src="post.img">
+        <img :src="post.img">
         <div class="product-list">
             <h3 class="item_title">{{post.title}}</h3>
             <span class="price"><span class="item_price"> {{post.price}}</span> ₽</span>
@@ -18,7 +18,6 @@
         }
     }
   }
-  
   </script>
   
   <style scoped>

@@ -11,14 +11,14 @@
   </head>
   
   <body>	
-    <post-header></post-header>
-    <post-catalog></post-catalog>
+    <store-header></store-header>
+    <store-catalog></store-catalog>
     
     
     <h1 class="сategory">Все товары</h1>
     
     <!--  На одной странице по 9 товаров-->
-    <post-list 
+    <store-list 
         :posts="posts"
         @remove="removePost"
     />
@@ -41,14 +41,14 @@
 </template>
 
 <script>
-    import PostList from './components/PostList.vue'
-    import PostHeader from './components/PostHeader.vue'
-    import PostCatalog from './components/PostCatalog.vue'
+    import StoreList from './components/StoreList.vue'
+    import StoreHeader from './components/StoreHeader.vue'
+    import StoreCatalog from './components/StoreCatalog.vue'
     export default {
       components: {
-        PostList,
-        PostHeader,
-        PostCatalog
+        StoreList,
+        StoreHeader,
+        StoreCatalog
       },
       data(){
         return{

@@ -48,7 +48,6 @@
 
 <script>
 export default {
-    name: "my-catalog",
     data(){
         return{
           isActive: false
