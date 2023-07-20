@@ -9,19 +9,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width">
   </head>
-  
-  <body>	
+
+  <body>
     <store-header></store-header>
     <store-catalog></store-catalog>
-    
-    
+
+
     <h1 class="сategory">Все товары</h1>
-    
+
     <!--  На одной странице по 9 товаров-->
-    <store-list 
-        :posts="posts"
-        @remove="removePost"
-    />
+    <store-list :posts="posts" @remove="removePost" />
 
     <div class="pages">
       <div class="page__left"></div>
@@ -32,54 +29,53 @@
       <div class="page__right"></div>
     </div>
 
-    <div class="grey__background">
-      <div id="footer">
-        <p>Ponyshop&trade;2023</p>
-      </div>
-    </div>
-</body>
+    <store-footer></store-footer>
+  </body>
 </template>
 
 <script>
-    import StoreList from './components/StoreList.vue'
-    import StoreHeader from './components/StoreHeader.vue'
-    import StoreCatalog from './components/StoreCatalog.vue'
-    export default {
-      components: {
-        StoreList,
-        StoreHeader,
-        StoreCatalog
-      },
-      data(){
-        return{
-          posts: [
-            {id: 1, img: "http://1001goroskop.ru/img/gadanie/derevo_zh/_derevo.jpg", title: "футболка", price: "200"},
-            {id: 2, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 3, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 4, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 5, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 6, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 7, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 8, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 9, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-          ],
-        }
-      },
-      methods: {
-        removePost(post){
-          this.posts = this.posts.filter(p => p.id !== post.id)
-        },
-      }
+import StoreList from './components/StoreList.vue'
+import StoreHeader from './components/StoreHeader.vue'
+import StoreCatalog from './components/StoreCatalog.vue'
+import StoreFooter from './components/StoreFooter.vue'
+export default {
+  components: {
+    StoreList,
+    StoreHeader,
+    StoreCatalog,
+    StoreFooter
+  },
+  data() {
+    return {
+      posts: [
+        { id: 1, img: "http://1001goroskop.ru/img/gadanie/derevo_zh/_derevo.jpg", title: "футболка", price: "200" },
+        { id: 2, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 3, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 4, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 5, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 6, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 7, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 8, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+        { id: 9, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+      ],
     }
+  },
+  methods: {
+    removePost(post) {
+      this.posts = this.posts.filter(p => p.id !== post.id)
+    },
+  }
+}
 
 </script>
 
 <style>
-*{
+* {
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   margin: 0;
   font-size: 16px;
 }
@@ -110,7 +106,7 @@ button {
 ul {
   padding: 0;
   margin: 0;
-display: none;
+  display: none;
 }
 
 li {
@@ -133,32 +129,33 @@ a:hover {
   color: #821978;
 }
 
-th,td{
+th,
+td {
   padding: 10px;
-  width:130px;
-  height:50px;
- }
- 
- th{
+  width: 130px;
+  height: 50px;
+}
+
+th {
   font-family: 'Philosopher', sans-serif;
-  font-size:15px;
+  font-size: 15px;
   background: #a53bcc;
   color: white;
- }
- td{
+}
+
+td {
   background: #eee;
-  text-align:center;
- }
+  text-align: center;
+}
 
 table td {
-overflow:hidden;
+  overflow: hidden;
 }
 
-.сategory{
-	font-family: 'Philosopher', sans-serif;
-	text-align:center;
-	color: #a53bcc;
-	font-size:28px;
+.сategory {
+  font-family: 'Philosopher', sans-serif;
+  text-align: center;
+  color: #a53bcc;
+  font-size: 28px;
 }
-
 </style>

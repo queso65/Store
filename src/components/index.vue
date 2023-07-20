@@ -203,31 +203,21 @@
 
 </script>
 
-<style>
-
-</style>
+<style></style>
 
 <template>
-    <div class="app">
-      <h1>Страница с постами</h1>
-      <input type="text" v-model="modificatorValue">
-      <my-button
-        @click="showDialog"
-        style="margin: 15px 0;"
-      >
+  <div class="app">
+    <h1>Страница с постами</h1>
+    <input type="text" v-model="modificatorValue">
+    <my-button @click="showDialog" style="margin: 15px 0;">
       Создать пост
     </my-button>
-      <my-dialog v-model:show="dialogVisible">
-        <post-form
-          @create="createPost"
-        />
-      </my-dialog>
-      <post-list 
-        :posts="posts"
-        @remove="removePost"
-      />
-    </div>
-    </template>
+    <my-dialog v-model:show="dialogVisible">
+      <post-form @create="createPost" />
+    </my-dialog>
+    <post-list :posts="posts" @remove="removePost" />
+  </div>
+</template>
     
     <script>
     import PostForm from './components/PostForm.vue'
@@ -262,17 +252,15 @@
     }
     </script>
     
-    <style>
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    .app {
-      padding: 20px;
-    }
-    
-    </style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  padding: 20px;
+}
+</style>
     
