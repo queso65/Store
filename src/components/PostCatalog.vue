@@ -3,7 +3,11 @@
         <div class="container"> 
         <!--  при нажатие нужно показать каталог-->
           <div class="catalog">
-            <div class="catalog__wrapper" id="catalog">
+            <div 
+            class="catalog__wrapper"
+            v-bind:class="{ open: isActive }"
+            v-on:click="openCatalog"
+            >
               <div class="catalog__header ">
                 <span>Категории</span><i class="fa fa-bars catalog__header-icon"></i>
               </div>
@@ -45,6 +49,21 @@
 <script>
 export default {
     name: "my-catalog",
+    data(){
+        return{
+          isActive: false
+        }
+    },
+    methods: {
+      openCatalog(){
+        if(this.isActive === false){
+          this.isActive = true;
+        }
+        else {
+          this.isActive = false;
+        }
+      }
+    }
 }
 </script>
 
@@ -186,5 +205,4 @@ export default {
             width: 100%;
       }
   }
-  
 </style>

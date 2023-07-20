@@ -53,13 +53,15 @@
       data(){
         return{
           posts: [
-            {id: 1, img: "./assets/img/T-shirt.jpg", title: "футболка", price: "200"},
-            {id: 2, img: "./assets/img/T-shirt.jpg", title: "футболка", price: "200"},
+            {id: 1, img: "http://1001goroskop.ru/img/gadanie/derevo_zh/_derevo.jpg", title: "футболка", price: "200"},
+            {id: 2, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
             {id: 3, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
             {id: 4, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
             {id: 5, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
             {id: 6, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
             {id: 7, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
+            {id: 8, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
+            {id: 9, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200"},
           ],
         }
       },

@@ -105,21 +105,6 @@ export default {
     height: 100%;
     font-size: 13px;
 }
-::-webkit-input-placeholder {
-    color: #fff
-}
-
-:-moz-placeholder {
-    color: #fff
-}
-
-::-moz-placeholder {
-    color: #fff
-}
-
-:-ms-input-placeholder {
-    color: #fff
-}
 
 button {
     outline: 0;
