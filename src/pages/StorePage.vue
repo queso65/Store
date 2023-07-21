@@ -29,22 +29,22 @@
     data() {
       return {
         posts: [
-          [{ id: 1, img: "http://1001goroskop.ru/img/gadanie/derevo_zh/_derevo.jpg", title: "футболка", price: "200" },
-          { id: 2, img: "C:/Users/artem/OneDrive/Desktop/store/src/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 3, img: "../img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 4, img: "../img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 5, img: "`@/assets/img/T-shirt.jpg`", title: "футболка", price: "200" },
-          { id: 6, img: "`/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 7, img: "assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 8, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 9, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" }],
-          [{ id: 10, img: "/../assets/img/logo.png", title: "футболка", price: "200" },
-          { id: 11, img: "../assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 12, img: "folder/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 13, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 14, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 15, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 16, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },]
+          [{id: 1, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 2, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 3, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 4, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 5, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 6, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 7, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 8, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 9, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" }],
+          [{id: 10, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 11, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 12, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 13, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 14, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 15, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },
+          { id: 16, img: require('../assets/img/T-shirt.jpg'), title: "футболка", price: "200" },]
         ],
         page: 0,
         limit: 9,
@@ -65,7 +65,6 @@
       }
     }
   }
-  
   </script>
   
   <style>
