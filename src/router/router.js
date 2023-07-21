@@ -1,5 +1,6 @@
 import StoreMain from "@/pages/StoreMain"
 import StorePage from "@/pages/StorePage"
+import StoreLogin from "@/pages/StoreLogin"
 import {createRouter, createWebHistory } from "vue-router"
 
 const routes = [
@@ -10,6 +11,10 @@ const routes = [
     {
         path:'/page',
         component: StoreMain
+     },
+     {
+        path:'/login',
+        component: StoreLogin
      },
 ]
 

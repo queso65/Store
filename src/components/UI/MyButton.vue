@@ -1,7 +1,5 @@
 <template>
-    <button  class="btn">
-          <slot></slot>
-    </button>
+    <button type="submit" class="registerbtn"><slot></slot></button>
 </template>
 
 <script>
@@ -11,10 +9,16 @@ export default {
 </script>
 
 <style scoped>
-.btn {
-    padding: 10px 15px;
-    background: none;
-    color: teal;
-    border: 1px solid teal;
-  }
+.registerbtn {
+    background-color: #a53bcc;
+    color: white;
+    padding: 15px 19px;
+    margin: 6px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+	border-radius: 5px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
 </style>

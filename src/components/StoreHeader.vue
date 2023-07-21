@@ -24,7 +24,7 @@
             </div>
 
             <div class="login">
-              <button class="button-login" onclick="window.location.href = 'login.html';">
+              <button class="button-login" @click="$router.push('/login')">
                 Вход
               </button>
             </div>
