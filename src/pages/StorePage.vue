@@ -30,12 +30,12 @@
       return {
         posts: [
           [{ id: 1, img: "http://1001goroskop.ru/img/gadanie/derevo_zh/_derevo.jpg", title: "футболка", price: "200" },
-          { id: 2, img: "src/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 3, img: "/../assets/img/logo.png", title: "футболка", price: "200" },
-          { id: 4, img: "../assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 5, img: "folder/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 6, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
-          { id: 7, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+          { id: 2, img: "C:/Users/artem/OneDrive/Desktop/store/src/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+          { id: 3, img: "../img/T-shirt.jpg", title: "футболка", price: "200" },
+          { id: 4, img: "../img/T-shirt.jpg", title: "футболка", price: "200" },
+          { id: 5, img: "`@/assets/img/T-shirt.jpg`", title: "футболка", price: "200" },
+          { id: 6, img: "`/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
+          { id: 7, img: "assets/img/T-shirt.jpg", title: "футболка", price: "200" },
           { id: 8, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" },
           { id: 9, img: "@/assets/img/T-shirt.jpg", title: "футболка", price: "200" }],
           [{ id: 10, img: "/../assets/img/logo.png", title: "футболка", price: "200" },
@@ -61,7 +61,7 @@
         return this.totalPages
       },
       changePage(page){
-        this.page = (page-1);
+        this.page = (page - 1);
       }
     }
   }

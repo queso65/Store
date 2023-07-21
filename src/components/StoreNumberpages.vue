@@ -1,7 +1,13 @@
 <template>
     <div class="pages">
         <div class="page__left"></div>
-        <a  v-for="page in totalPages+1" :key="page" :data-id="page" class="page page-text" @click="changePage">{{ page }}</a>
+        <a v-for="page in totalPages + 1" 
+          :key="page" :data-id="page" 
+          class="page page-text" 
+          @click="changePage"
+        >
+            {{ page }}
+        </a>
         <div class="page__right"></div>
     </div>
 </template>
@@ -10,6 +16,7 @@
 export default {
    props: {
     totalPages: Number,
+    activePage: Number
    },
    methods: {
     changePage(event){
@@ -57,5 +64,9 @@ export default {
 	font-family: Arial, sans-serif;
 	font-size: 15px;
 	color:#8c8c8c;
+}
+
+.active{
+    border: 1px solid #a53bcc;
 }
 </style>
