@@ -7,7 +7,7 @@
   </head>
   <header class="header">
     <div class="container align-items_center">
-      <a href="index.html" class="logo" title="logo">
+      <a  @click="$router.push('/')" class="logo" title="logo">
         <img src="@/assets/img/logo.png" class="img_logo" alt="Logo" />
       </a>
       <div class="header-right">
@@ -27,7 +27,7 @@
             <div class="cart-informer">
               <button
                 class="cart-informer__button"
-                onclick="window.location.href = 'cart.html';"
+                @click="$router.push('/cart')"
               >
                 <span class="cart-informer__count" id="cart_count">5</span>
                 <span class="cart-informer__icon"

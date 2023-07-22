@@ -27,10 +27,8 @@
 
           <div class="registration__container signin">
             <p>
-              Нет аккаунта?
-              <a @click="$router.push('/registration')" class="dodgerblue"
-                >Зарегистрироваться</a
-              >
+                Нет аккаунта?
+                <a @click="$router.push('/registration')" class="dodgerblue">Зарегистрироваться</a>
             </p>
           </div>
         </div>
