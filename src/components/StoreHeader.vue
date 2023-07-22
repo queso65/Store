@@ -1,24 +1,38 @@
 <template>
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <header class="header">
     <div class="container align-items_center">
       <a href="index.html" class="logo" title="logo">
-        <img src="@/assets/img/logo.png" class="img_logo" alt="Logo">
+        <img src="@/assets/img/logo.png" class="img_logo" alt="Logo" />
       </a>
       <div class="header-right">
         <form class="search-form">
-          <input type="text" name="id" value="" placeholder="Поиск" class="search search-input">
+          <input
+            type="text"
+            name="id"
+            value=""
+            placeholder="Поиск"
+            class="search search-input"
+          />
           <button><i class="fa fa-search search-i"></i></button>
         </form>
 
         <div class="block">
           <div class="subblock">
             <div class="cart-informer">
-              <button class="cart-informer__button" onclick="window.location.href = 'cart.html';">
+              <button
+                class="cart-informer__button"
+                onclick="window.location.href = 'cart.html';"
+              >
                 <span class="cart-informer__count" id="cart_count">5</span>
-                <span class="cart-informer__icon"><i class="fa fa-shopping-cart cart-informer__icon-i"></i></span>
+                <span class="cart-informer__icon"
+                  ><i class="fa fa-shopping-cart cart-informer__icon-i"></i
+                ></span>
                 <span class="cart-informer__value" id="cart_cost">500 ₽</span>
               </button>
             </div>

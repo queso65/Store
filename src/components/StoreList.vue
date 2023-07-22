@@ -1,28 +1,44 @@
 <template>
   <div v-if="posts.length > 0">
     <div class="product-gr">
-      <store-good v-for="post in posts" :post="post" :key="post.id" @remove="$emit('remove', post)" />
+      <store-good
+        v-for="post in posts"
+        :post="post"
+        :key="post.id"
+        @remove="$emit('remove', post)"
+      />
+      <store-good
+        v-for="post in 9 - posts.length"
+        :key="post"
+        :post="emptyPost"
+        v-bind:class="{ not__visibility: true }"
+      />
     </div>
   </div>
-  <h2 v-else style="color: red">
-    Список товаров пуст
-  </h2>
 </template>
   
 <script>
-import StoreGood from './StoreGood.vue';
+import StoreGood from "./StoreGood.vue";
 export default {
   components: { StoreGood },
+  data() {
+    return {
+      emptyPost: { id: -1, img: "", title: "", price: "" },
+    };
+  },
   props: {
     posts: {
       type: Array,
       required: true,
-    }
-  }
-}
+    },
+  },
+};
 </script>
   
 <style scoped>
+.not__visibility {
+  visibility: hidden;
+}
 .product-gr {
   display: grid;
   grid-gap: 45px;

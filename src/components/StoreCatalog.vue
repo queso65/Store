@@ -3,9 +3,14 @@
     <div class="container">
       <!--  при нажатие нужно показать каталог-->
       <div class="catalog">
-        <div class="catalog__wrapper" v-bind:class="{ open: isActive }" v-on:click="openCatalog">
-          <div class="catalog__header ">
-            <span>Категории</span><i class="fa fa-bars catalog__header-icon"></i>
+        <div
+          class="catalog__wrapper"
+          v-bind:class="{ open: isActive }"
+          v-on:click="openCatalog"
+        >
+          <div class="catalog__header">
+            <span>Категории</span
+            ><i class="fa fa-bars catalog__header-icon"></i>
           </div>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -46,20 +51,19 @@
 export default {
   data() {
     return {
-      isActive: false
-    }
+      isActive: false,
+    };
   },
   methods: {
     openCatalog() {
       if (this.isActive === false) {
         this.isActive = true;
-      }
-      else {
+      } else {
         this.isActive = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -83,7 +87,6 @@ export default {
 
 .menu {
   height: 60px;
-
 }
 
 .catalog {
@@ -156,7 +159,7 @@ li {
   top: 0;
   height: 100%;
   padding: 20px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .catalog__item:hover .catalog__subcatalog {
@@ -184,7 +187,7 @@ li {
   width: 100px;
   font-size: 15px;
   text-align: center;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .menu__border {
@@ -196,7 +199,6 @@ li {
 }
 
 @media (max-width: 762px) {
-
   .catalog__subcatalog,
   .menu__border,
   .menu__nav {
@@ -206,4 +208,5 @@ li {
   .catalog {
     width: 100%;
   }
-}</style>
+}
+</style>
