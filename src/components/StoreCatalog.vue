@@ -3,37 +3,13 @@
     <div class="container">
       <!--  при нажатие нужно показать каталог-->
       <div class="catalog">
-        <div
-          class="catalog__wrapper"
-          v-bind:class="{ open: isActive }"
-          v-on:click="openCatalog"
-        >
+        <div class="catalog__wrapper" v-bind:class="{ open: isActive }" v-on:click="openCatalog">
           <div class="catalog__header">
-            <span>Категории</span
-            ><i class="fa fa-bars catalog__header-icon"></i>
+            <span>Категории</span><i class="fa fa-bars catalog__header-icon"></i>
           </div>
-          <ul class="catalog__list">
+          <ul class="catalog__list" v-for="cls in classes" :cls="cls" :key="cls.id">
             <li class="catalog__item">
-              <a href="" class="catalog__link">футболки</a>
-            </li>
-            <li class="catalog__item">
-              <a href="" class="catalog__link">брелки</a>
-            </li>
-            <li class="catalog__item">
-              <a href="" class="catalog__link">канцелярия</a>
-              <div class="catalog__subcatalog">
-                <a href="" class="catalog__subcatalog-link">ручки</a>
-                <a href="" class="catalog__subcatalog-link">блокноты</a>
-              </div>
-            </li>
-            <li class="catalog__item">
-              <a href="" class="catalog__link">сумки</a>
-            </li>
-            <li class="catalog__item">
-              <a href="" class="catalog__link">постеры</a>
-            </li>
-            <li class="catalog__item">
-              <a href="" class="catalog__link">домашняя одежда</a>
+              <a href="" class="catalog__link">{{cls.name}}</a>
             </li>
           </ul>
         </div>
@@ -48,21 +24,34 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
       isActive: false,
+      classes: [],
     };
   },
   methods: {
+    async fetchClasses() {
+      console.log('ffff')
+      const response = await axios.get('http://127.0.0.1:8000/api/categories')
+      this.classes = response.data;
+      console.log(this.classes)
+    },
     openCatalog() {
       if (this.isActive === false) {
         this.isActive = true;
-      } else {
+      } 
+      else {
         this.isActive = false;
       }
     },
   },
+  mounted() {
+        this.fetchClasses();
+  }
 };
 </script>
 
@@ -199,6 +188,7 @@ li {
 }
 
 @media (max-width: 762px) {
+
   .catalog__subcatalog,
   .menu__border,
   .menu__nav {
