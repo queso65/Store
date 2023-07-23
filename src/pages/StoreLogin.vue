@@ -1,34 +1,24 @@
 <template>
   <div class="login-center">
     <div style="margin: auto">
-      <form action="vendor/signin.php" method="post">
+      <form @submit.prevent>
         <div class="registration__container">
           <h1>Авторизация</h1>
           <hr class="registration__line" />
 
           <my-label for="email">Email</my-label>
-          <my-input
-            v-model="user.amail"
-            type="text"
-            placeholder="Введите Email"
-            name="email"
-          />
+          <my-input v-model="user.email" type="text" placeholder="Введите Email" name="email" />
 
           <my-label for="psw">Пароль</my-label>
-          <my-input
-            v-model="user.password"
-            type="password"
-            placeholder="Введите пароль"
-            name="psw"
-          />
+          <my-input v-model="user.password" type="password" placeholder="Введите пароль" name="psw" />
 
           <hr class="registration__line" />
           <my-button @click="logUser">Войти</my-button>
 
           <div class="registration__container signin">
             <p>
-                Нет аккаунта?
-                <a @click="$router.push('/registration')" class="dodgerblue">Зарегистрироваться</a>
+              Нет аккаунта?
+              <a @click="$router.push('/registration')" class="dodgerblue">Зарегистрироваться</a>
             </p>
           </div>
         </div>
@@ -38,11 +28,13 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
       user: {
-        name: "",
+        email: "",
         password: "",
       },
       passcheck: "",
@@ -50,8 +42,23 @@ export default {
     };
   },
   methods: {
-    async logUser() {},
-  },
+    async logUser() {
+            
+            console.log({ author: this.user })
+            const res = await axios.post('http://127.0.0.1:8000/api/users/log/', { user: this.user });
+            const out = res.data;
+            console.log({ out })
+            if (out) {
+                this.logstat = 1;
+                this.$emit('log', this.user.email);
+                this.$router.push('/')
+                this.user = {
+                    name: '',
+                    password: ''
+                }
+            }
+        }
+    },
 };
 </script>
 
