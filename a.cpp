@@ -50,7 +50,9 @@ struct SharedData {
     int counter;
     bool copyOneExists;
     bool copyTwoExists;
+#ifdef __linux__
     pid_t mainPid;
+#endif
 };
 
 
@@ -407,31 +409,22 @@ void minorProgram() {
     console.join();
 }
 
-#ifdef WIN32
-#else
+#ifdef __linux__
 bool isAlreadyRunning() {
-
-    auto shm = shm_open("MySharedMemory", O_RDWR, 0777);
-    ftruncate(shm, sizeof(SharedData));
-    SharedData* sharedData = (SharedData*)mmap(0, sizeof(SharedData), PROT_WRITE | PROT_READ, MAP_SHARED, shm, 0);
-
     std::ifstream lockFile("my_program.lock");
     if (lockFile.good()) {
         lockFile.close();
         return true;
     }
     else {
-
-        sem_wait(mainPidMutex);
-        sharedData->mainPid = getpid();
-        sem_post(mainPidMutex);
-
         std::ofstream newLockFile("my_program.lock");
         return false;
     }
 }
+#endif
 
 
+#ifdef __linux__
 void signalHeandler(int signum) {
     auto shm = shm_open("MySharedMemory", O_RDWR, 0777);
     ftruncate(shm, sizeof(SharedData));
@@ -452,8 +445,7 @@ void signalHeandler(int signum) {
 
 int main(int argc, char* argv[]) {
 
-#ifdef WIN32
-#else
+#ifdef __linux__
     std::signal(SIGINT, signalHeandler);
     std::signal(SIGHUP, signalHeandler);
 #endif
@@ -462,7 +454,9 @@ int main(int argc, char* argv[]) {
 
 #ifdef WIN32
     if (argc == 2) {
-        SharedData* sharedData;
+        HANDLE hMapFile = CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0, sizeof(SharedData), "MyFileMappingObject");
+        LPCTSTR pBuf = (LPTSTR)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(SharedData));
+        SharedData* sharedData = (SharedData*)pBuf;
         cernelCopy(std::string(argv[1]), sharedData);
         return 0;
     }
@@ -482,9 +476,14 @@ int main(int argc, char* argv[]) {
     }
 #endif
     else {
-
         SharedData* sharedData = createSharedMemory();
-
+        
+#ifdef __linux__
+        sem_wait(mainPidMutex);
+        sharedData->mainPid = getpid();
+        sem_post(mainPidMutex);
+#endif
+        
         std::thread copies(createCopies, sharedData);
         std::thread console(consoleThread, sharedData);
         std::thread logging(loggingThread, sharedData);
